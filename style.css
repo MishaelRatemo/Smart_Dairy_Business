@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
     background-color: #669068;
 }
@@ -21,19 +23,119 @@ header {
 }
 
 
-/* End here */
+/*############Ends here########## */
 
 
-/*   ****Start of Container */
+/***********Start of Container************ */
 
 .container {
     display: flex;
     position: relative;
+    justify-content: space-between;
 }
 
     #left {
+        color: white;
+        text-align: center;
+        font-size: 2pc;
         height: 700px;
         width: 40%;
         background-image: linear-gradient(to bottom, black, transparent);
         box-shadow: 5px 5px 25px black;
     }
+
+    #right {
+        padding: 10px 30px;
+        justify-content: center;
+    }
+
+    #right h1{
+        color: white;
+        text-align: center;
+        font-size: 2pc;
+
+    }
+    #right #form{
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 30px;
+    }
+    #right #form label{
+        text-align: center;
+        font-size: 1.5pc;
+        font-weight: bold;
+    }
+
+    #right #form input{
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        font-size: 1.2pc;
+    }
+    #right #form input:focus{
+        /* remove focus border */
+        outline: none;
+
+    }
+    #totals{
+        align-items: center;
+        margin: auto;
+        width: 20%;
+        position: relative;
+        left: 38%;
+        border-radius: 45%;
+        padding: 30px;
+        border: none;
+        background-color: #81a934;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 10px 10px 25px black;
+    }
+    #totals:hover{
+        color: black;
+    }
+    .sums{
+        display: flex;
+        justify-content: space-between;
+    }
+    #daily,#weekly{
+        height: 380px;
+       
+        width: 45%;
+        position: relative;
+        top: 15px;
+        gap: 5px;
+        margin: auto;
+        box-shadow: 10px 10px 30px #7FAA36;
+    }
+    #daily{
+        background-image: linear-gradient(to right, black, transparent);
+    }
+    #weekly{
+        background-image: linear-gradient(to left, black, transparent);
+    }
+    /*#######End of Container########## */
+
+/************** Footer styling starts here****************** */
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #413F3F;
+    padding: 20px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 20px 20px;
+}
+    footer img{
+          width: 50px;
+    }
+    footer div{
+        display: flex;
+        justify-content: space-around;
+        border-right: 3px dotted white;
+        padding-right: 20px;
+    }
+ 
