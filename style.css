@@ -101,7 +101,7 @@ header {
     }
     #daily,#weekly{
         height: 380px;
-       
+        padding: 10px;
         width: 45%;
         position: relative;
         top: 15px;
@@ -111,6 +111,18 @@ header {
     }
     #daily{
         background-image: linear-gradient(to right, black, transparent);
+        text-align: center;
+        
+    }
+    table {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-size: 1.5pc;
+        font-weight: bold;
+    }
+    td{
+        text-align: center;
     }
     #weekly{
         background-image: linear-gradient(to left, black, transparent);

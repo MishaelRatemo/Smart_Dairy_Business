@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <script src="myJs.js"></script>
     <title>Smart Dairy</title>
 </head>
 
@@ -24,7 +23,7 @@
             </section>
             <section id="right">
                 <h1>Litres collected per day from <br> Sheds:</h1>
-                <form action="#" method="POST">
+                <form id="data" >
                     <div id="form">
                         <label for="shedA" >Shed A in Lt.
                             <input type="text" id="shedA">
@@ -39,7 +38,7 @@
                         </label><br>
 
                         <label for="shedB" >Shed D in Lt.
-                            <input type="text" id="shedB">
+                            <input type="text" id="shedD">
                         </label><br>
                  </div>
                     <div>
@@ -48,9 +47,47 @@
                 </form>
                 <div class="sums">
                     <article id="daily">
+                        <table>
+                            <tr>
+                                <th id="heading"></th>
+                            </tr>
+                            <tr>
+                                <td id="dstats"></td>
+                            </tr>
+                        </table>
 
                     </article>
                     <article id="weekly">
+                        <table>
+                            <tr>
+                                <th colspan="3"><h1 id="weeklyheading"></h1></th>
+                            </tr>
+                            <tr>
+                                <td id="description1"></td>
+                                <td id="value1"></td>
+                                <td id="units1"></td>
+                            </tr>
+                            <tr>
+                                <td id="description2"></td>
+                                <td id="value2"></td>
+                                <td id="units2"></td>
+                            </tr>
+                            <tr>
+                                <td id="description3"></td>
+                                <td id="value3"></td>
+                                <td id="units3"></td>
+                            </tr>
+                            <tr>
+                                <td id="description4"></td>
+                                <td id="value4"></td>
+                                <td id="units4"></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td colspan="2">Total weekly collection <br> from All Sheds </td>
+                                <td id="wtotals"></td>
+                            </tr>
+                        </table>
 
                     </article>
                 </div>
@@ -75,6 +112,7 @@
 
         </footer>
     </main>
+    <script type="text/javascript" src="myJs.js"></script>
 
 </body>
 
