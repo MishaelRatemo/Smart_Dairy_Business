@@ -9,9 +9,7 @@ const val4 = document.getElementById("shedD");
 data.addEventListener('submit',dailystats);
 
     function dailystats(e){
-        e.preventDefault();           
-            
-  
+        e.preventDefault();  
             let res=parseFloat(val1.value)+parseFloat(val2.value)+parseFloat(val3.value)+parseFloat(val4.value);
 
                  console.log(res);
@@ -30,12 +28,10 @@ data.addEventListener('submit',dailystats);
                  document.getElementById('allsheds').innerHTML=" Totals ";
                  document.getElementById('totalsheds').innerHTML=res;
 
-
-
             }
-            //document.getElementById('heading').innerHtml=res;
 
 data.addEventListener('submit',weeklyStats);
+
     function weeklyStats(){
         let units="  litres."
         let shedA= parseFloat(val1.value)*7;
@@ -55,7 +51,6 @@ data.addEventListener('submit',weeklyStats);
         document.getElementById('units2').innerHTML=units;
         console.log("Shed B weekly collection : "+ shedB+ " Litres.");
         console.log("  ");
-
 
         let shedC= parseFloat(val3.value)*7;
         document.getElementById('description3').innerHTML="Shed C weekly ";        
@@ -77,25 +72,79 @@ data.addEventListener('submit',weeklyStats);
         let totLitres = shedA+shedB+shedC+shedD;
         document.getElementById('wtotals').innerHTML=totLitres+" Litres."
         console.log(totLitres+" Ltr.");
-
-
     }
 
-/*
-    function dailycollection(){
-        data.addEventListener('submit', function(event){
-            event.preventDefault();
-            
-            let val1 = document.getElementById("shedA").value;
-        let val2 = document.getElementById("shedB").value;
-        let val3 = document.getElementById("shedC").value;
-        let val4 = document.getElementById("shedD").value;
-        
-        let results =val1+val2+val3+val4
-        console.log(results)
-        });
-        
+function getStats(){
+    let rate = prompt("Enter rate in Ksh ",'30.0');
+    let rates=parseFloat(rate);
+    let totalProductionDaily= parseFloat(val1.value)+parseFloat(val2.value)+parseFloat(val3.value)+parseFloat(val4.value);
+    let weeklyIncome= rates*totalProductionDaily*7;
+    console.log(weeklyIncome);
+    //jan summary
+    let janProduction= totalProductionDaily*31;
+    let janIncome= janProduction*rates;
+    document.getElementById('janP').innerHTML=janProduction;
+    document.getElementById('janI').innerHTML="Ksh. "+janIncome;
+    //feb summary
+    let febProduction=totalProductionDaily*29;
+    let febIncome=febProduction*rates;
+    document.getElementById('febP').innerHTML=febProduction;
+    document.getElementById('febI').innerHTML="Ksh. "+febIncome;
+    //March summary
+    let marchProduction=totalProductionDaily*31;
+    let marchIncome=marchProduction*rates;
+    document.getElementById('marP').innerHTML=marchProduction;
+    document.getElementById('marI').innerHTML="Ksh. "+marchIncome;
+    // April summary
+    let aprProd =totalProductionDaily*30;
+    let aprIncome =aprProd*rates;
+    document.getElementById('aprP').innerHTML=aprProd;
+    document.getElementById('aprI').innerHTML="Ksh. "+aprIncome;
+    //May summary
+    let mayProd =totalProductionDaily*31;
+    let mayIncome =mayProd*rates;
+    document.getElementById('mayP').innerHTML=mayProd;
+    document.getElementById('mayI').innerHTML="Ksh. "+mayIncome;
+    //June summary 
+    let junProd= totalProductionDaily*30;
+    let junIncome= junProd*rates;
+    document.getElementById('junP').innerHTML=junProd;
+    document.getElementById('junI').innerHTML="Ksh. "+junIncome;
+    //july summary
+    let julyprod=totalProductionDaily*31;
+    let julyIncome=julyprod*rates;
+    document.getElementById('julP').innerHTML=julyprod;
+    document.getElementById('julI').innerHTML="Ksh. "+julyIncome;
+    //August summary
+    let augProd=totalProductionDaily*31;
+    let augIncome=augProd*rates;
+    document.getElementById('augP').innerHTML=augProd;
+    document.getElementById('augI').innerHTML="Ksh. "+augIncome;
+    //September summary
+    let sepProd= totalProductionDaily*30;
+    let sepIncome=sepProd*rates;
+    document.getElementById('sepP').innerHTML=sepProd;
+    document.getElementById('sepI').innerHTML="Ksh. "+sepIncome;
+    //Oct summary 
+    let octProd = totalProductionDaily*31;
+    let octIncome= octProd*rates;
+    document.getElementById('octP').innerHTML=octProd;
+    document.getElementById('octI').innerHTML="Ksh. "+octIncome;
+    //November summary
+    let novProd=totalProductionDaily*30;
+    let novIncome=novProd*rates;
+    document.getElementById('novP').innerHTML=novProd;
+    document.getElementById('novI').innerHTML="Ksh. "+novIncome;
+    // Dec summary
+    let decProd= totalProductionDaily*31;
+    let decIncome=decProd*rates;
+    document.getElementById('decP').innerHTML=decProd;
+    document.getElementById('decI').innerHTML="Ksh. "+decIncome;
 
-    }
-    */
+    // Yearly income
+    let incomeOverYear=janIncome+febIncome+marchIncome+aprIncome+mayIncome+junIncome+julyIncome+augIncome+sepIncome+octIncome+novIncome+decIncome;
+    document.getElementById('yearlyincome').innerHTML="Ksh "+incomeOverYear;
+    
+}
+
 
