@@ -43,6 +43,13 @@ header {
         background-image: linear-gradient(to bottom, black, transparent);
         box-shadow: 5px 5px 25px black;
     }
+    #MIstats{
+        padding: 10px;
+        color: black;
+        background-color: #81a934;
+        font-weight: bold;
+        border-radius: 5px;
+    }
 
     #right {
         width: 50%;
