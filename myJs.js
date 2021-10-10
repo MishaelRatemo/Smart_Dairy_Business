@@ -17,7 +17,20 @@ data.addEventListener('submit',dailystats);
                  console.log(res);
                  console.log("      ");
                  document.getElementById('heading').innerHTML="Todays Collection";
-                 document.getElementById('dstats').innerHTML=res;
+                 document.getElementById('thleft').innerHTML=" Shed ";
+                 document.getElementById('thright').innerHTML="NO. of Lt";                 
+                 document.getElementById('shed1').innerHTML=" A ";
+                 document.getElementById('shed1val').innerHTML=val1.value;
+                 document.getElementById('shed2').innerHTML=" B ";
+                 document.getElementById('shed2val').innerHTML=val2.value;
+                 document.getElementById('shed3').innerHTML=" C ";
+                 document.getElementById('shed3val').innerHTML=val3.value;
+                 document.getElementById('shed4').innerHTML=" D ";
+                 document.getElementById('shed4val').innerHTML=val4.value;
+                 document.getElementById('allsheds').innerHTML=" Totals ";
+                 document.getElementById('totalsheds').innerHTML=res;
+
+
 
             }
             //document.getElementById('heading').innerHtml=res;
@@ -28,7 +41,7 @@ data.addEventListener('submit',weeklyStats);
         let shedA= parseFloat(val1.value)*7;
              //display to html page
         document.getElementById('weeklyheading').innerHTML="WEEKLY STATS";        
-        document.getElementById('description1').innerHTML="Shed A weekly collection";        
+        document.getElementById('description1').innerHTML="Shed A weekly ";        
         document.getElementById('value1').innerHTML=shedA;
         document.getElementById('units1').innerHTML=units;
             //display to console
@@ -37,7 +50,7 @@ data.addEventListener('submit',weeklyStats);
         console.log("  ");
 
         let shedB= parseFloat(val2.value)*7;
-        document.getElementById('description2').innerHTML="Shed B weekly collection";        
+        document.getElementById('description2').innerHTML="Shed B weekly ";        
         document.getElementById('value2').innerHTML=shedB;
         document.getElementById('units2').innerHTML=units;
         console.log("Shed B weekly collection : "+ shedB+ " Litres.");
@@ -45,14 +58,14 @@ data.addEventListener('submit',weeklyStats);
 
 
         let shedC= parseFloat(val3.value)*7;
-        document.getElementById('description3').innerHTML="Shed C weekly collection";        
+        document.getElementById('description3').innerHTML="Shed C weekly ";        
         document.getElementById('value3').innerHTML=shedC;
         document.getElementById('units3').innerHTML=units;
         console.log("Shed C weekly collection : "+ shedC+ " Litres.");
         console.log("  ");
 
         let shedD= parseFloat(val4.value)*7;
-        document.getElementById('description4').innerHTML="Shed A weekly collection";        
+        document.getElementById('description4').innerHTML="Shed A weekly ";        
         document.getElementById('value4').innerHTML=shedD;
         document.getElementById('units4').innerHTML=units;
         console.log("Shed D weekly collection : "+ shedD+ " Litres.");
